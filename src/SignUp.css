@@ -1,0 +1,19 @@
+.popup {  
+    position: fixed;  
+    width: 500px;  
+    height: 350px;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    margin: auto;  
+    background-color: white;
+    border: 100px; 
+    border-color: #2F4858;
+}  
+
+.dim {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
