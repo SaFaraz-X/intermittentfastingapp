@@ -1,16 +1,26 @@
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: #333;
-    font-family: Arial;
+    background-color: #A5E1FF;
+    font-family:'Muli', sans-serif;;
+    margin-left: 550px;
+    margin-right: 100px;
   }
   
   /* Links inside the navbar */
   .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    display: inline-block;
+    font-size: 1.5em;;
+    color: #2F4858;
     text-decoration: none;
+    padding: 20px 40px;
+    font-weight: bold;
+    border: 3px solid #A5E1FF;
+    position: relative; left: 300px; top: 10px;
+
+  }
+
+/* Hover animation */
+ a:hover {
+    transform: scale(1.3)
   }
