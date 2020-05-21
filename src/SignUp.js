@@ -78,12 +78,7 @@ class SignUp extends React.Component {
                                 <input type="number" name="myAge" value = {this.state.myAge} onChange = {this.handleInputChange} required />
                             </label>
                         </section>
-                
-                        <br />
-                
-                        <section class = "next">
-                            <input type="submit" value="Next" />
-                        </section><br />
+            
                         <br /><br />
                 
                         <section class = "next">
