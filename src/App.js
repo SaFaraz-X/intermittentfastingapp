@@ -5,6 +5,10 @@ import Nav from './Nav.js'
 import About from './About.js'
 //import History from './history.js'
 
+import History from './History.js';
+import Clock from './Clock.js';
+
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +17,8 @@ class App extends Component {
         <Home />
         <About />
         {/* <History /> */}
+        <Clock />
+        <History />
       </div>
     );
   }

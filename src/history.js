@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import {Bar, Charts, defaults} from 'react-chartjs-2';
 
 
