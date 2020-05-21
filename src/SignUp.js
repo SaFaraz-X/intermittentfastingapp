@@ -42,13 +42,13 @@ class SignUp extends React.Component {
         
                         <section className = "name">
                             <label>
-                                Name:
+                                Name: 
                                 <input name = "myName" type="text" value = {this.state.myName} onChange = {this.handleInputChange} required />
                             </label>
                         </section><br />
                         <section className = "gender">
                             <label>
-                                Gender:
+                                Gender: 
                             <select name = "myGender" value = {this.state.myGender} onChange = {this.handleInputChange} required>
                                 <option value = "Male">Male</option>
                                 <option value = "Female">Female</option>
@@ -57,19 +57,19 @@ class SignUp extends React.Component {
                             </section><br />
                         <section className = "height">
                             <label for='myHeight'>
-                                Height (inches):
+                                Height (inches): 
                                 <input type="number" name = "myHeight" value = {this.state.myHeight} onChange = {this.handleInputChange} required />
                             </label>
                         </section><br />
                         <section className = "weight">
                             <label for='myWeight'>
-                                Weight (pounds):
+                                Weight (pounds): 
                                 <input type="number" name="myWeight" value = {this.state.myWeight} onChange = {this.handleInputChange} required />
                             </label>
                         </section><br />
                         <section className = "age">
                             <label>
-                                Age (years):
+                                Age (years): 
                                 <input type="number" name="myAge" value = {this.state.myAge} onChange = {this.handleInputChange} required />
                             </label>
                         </section><br />
