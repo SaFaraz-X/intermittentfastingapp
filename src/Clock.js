@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import moment from 'moment';
 import CountdownUnit from './CountdownUnit';
+import './ClockAndTimer.css'
 
 // This should be in the 'History' section of the application
 
@@ -201,16 +201,18 @@ class Clock extends Component {
     }
     render() {
       return (
-        <div className="body">
+        <div className="clock">
 
         {/* REAL-TIME CLOCK*/}
+        <div className= 'realtime'>
         <h1> Real-Time Clock</h1>
-        <p className="App-clock">
+        <p>
           The time is {this.state.time}.
         </p>
+        </div>
 
         {/* HEADER */}
-        <header>
+        <header className='header'>
           <h1 className="header-item">Countdown Timer</h1>
           <div className="header-item button-group">
             <button type="button" className="button header-button clear" onClick={() => this.clearCountdown()}>Clear</button>
@@ -259,11 +261,11 @@ class Clock extends Component {
             <p>Countdown ends in...</p>
             {this.state.countdown.map((countdownUnit, index) => <CountdownUnit key={index} countdownUnit={countdownUnit} />)}
           </div>
-          <p className="message info-message" style={this.state.infoStyle}><span className="fa fa-info-circle fa-lg fa-fw"></span> {this.state.infoMessage}</p>
+          <p className="messageInfoMessage" style={this.state.infoStyle}><span className="fa fa-info-circle fa-lg fa-fw"></span> {this.state.infoMessage}</p>
         </main>
 
         {/* FOOTER */}
-        <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
+        {/*<footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>*/}
        
       </div>
           
