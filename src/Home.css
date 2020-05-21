@@ -1,5 +1,6 @@
 body {
-  background-color: #A5E1FF;
+  background-color: #0e9AA7;
+  color: #ffffff;
   padding: 20px;
   margin: 0;
   overflow-x: hidden;
@@ -19,9 +20,10 @@ body {
 }
 
 h1 {
-  color: #2F4858;
+  color: #F5EE9E;
   font-size: 3em;;
 }
+
 
 
 .logo {
@@ -32,17 +34,18 @@ h1 {
 
 .logoName {
   position:relative; top: -660px; left: 19px;
-  color: #DA3E52;
+  color: #ffffff;
   font-size: 1.3em;
   font-weight: bold;
 }
 
 .Welcome {
   position: relative; top: 50px;
+  color: #2D728F
 }
 
 .Signup {
-  background-color: #DA3E52; 
+  background-color:#FE4A49; 
   border: none;
   color: white;
   padding: 20px;
@@ -94,7 +97,7 @@ h1 {
 
 .smartfast {
   font-size:5em;
-  color: #DA3E52;
+  color: #ffffff;
   font-weight: bold;
   position: relative; left: 35px; top: -180px;
 }
