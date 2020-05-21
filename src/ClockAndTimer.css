@@ -1,0 +1,20 @@
+.Chart {
+    position: relative; top: -1300px;
+  }
+
+.clock {
+    position: relative; top: -1300px;
+}
+
+.header {
+    position: relative; top: -140px; left: 800px;
+}
+
+.modal {
+    position: relative; left: 1000px; top: -150px;
+}
+
+.countdown {
+    position: relative; top: -50px; left: 950px;
+}
+

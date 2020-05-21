@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import {Bar, Charts, defaults} from 'react-chartjs-2';
+import { Chart } from "react-google-charts";
+import './ClockAndTimer.css';
 
 
 class History extends Component {
@@ -67,6 +67,40 @@ class History extends Component {
     render(){
         return (
             <div classname='Chart'>
+            <h1>History Chart</h1>
+
+            <Chart
+                width={'500px'}
+                height={'300px'}
+                chartType="BarChart"
+                loader={<div>Loading Chart</div>}
+                data={[
+                    ['Day', 'Fasting Time', 'NonFasting Time'],
+                    ['May 18, 2020', 10, 14],
+                    ['May 19, 2020', 8, 16],
+                    ['May 20, 2020', 14, 10],
+                    ['May 21, 2020', 3, 21],
+                    ['May 22, 2020', 9, 15],
+                    ['May 23, 2020', 10, 14],
+                    ['May 24, 2020', 7, 17],
+                ]}
+                options={{
+                    title: 'Tracking Fast (hours per day)',
+                    chartArea: { width: '50%' },
+                    isStacked: true,
+                    hAxis: {
+                    title: 'Total hours per fast and non fast',
+                    maxValue: 24,
+                    // minValue: 0,
+                    },
+                    vAxis: {
+                    title: 'Dates',
+                    },
+                }}
+            />
+
+            {/* <Bar 
+            <div className='Chart'>
             <Bar 
                 data={this.state.chartData}
                 width={50}
@@ -95,7 +129,7 @@ class History extends Component {
                         }]
                     },
                 }}
-                />
+                /> */}
             </div>
         )
     }

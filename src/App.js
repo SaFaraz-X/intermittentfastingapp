@@ -3,7 +3,13 @@ import './Home.css';
 import Home from './Home.js';
 import Nav from './Nav.js';
 import History from './history.js';
+import About from './About.js'
 import Clock from './Clock.js';
+import Timer from './Timer.js';
+
+
+
+
 
 
 class App extends Component {
@@ -12,8 +18,14 @@ class App extends Component {
       <div>
         <Nav/>
         <Home />
+        <About />
+        {/* <History /> */}
         <Clock />
         <History />
+        <Timer
+        githubURL="https://github.com/completejavascript/pomodoro-clock" 
+        defaultBreakLength='8' 
+        defaultSessionLength='16' />
       </div>
     );
   }
