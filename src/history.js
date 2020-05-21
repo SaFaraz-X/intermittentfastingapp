@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
 import {Bar, Charts, defaults} from 'react-chartjs-2';
+import './ClockAndTimer.css';
 
 
 class History extends Component {
@@ -66,7 +66,7 @@ class History extends Component {
 
     render(){
         return (
-            <div classname='Chart'>
+            <div className='Chart'>
             <Bar 
                 data={this.state.chartData}
                 width={50}
