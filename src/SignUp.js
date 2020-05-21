@@ -1,7 +1,21 @@
 import React from 'react';
 import './SignUp.css';
+import './userWriter.js'
 //import Person from './Person'
 
+function read() {
+    const fs = require('fs')
+
+    alert()
+
+    fs.readFile('./Users.JSON', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log("File read failed:", err)
+            return
+        }
+        alert('File data:', jsonString) 
+    })
+}
 
 class SignUp extends React.Component {
     constructor(props) {
@@ -9,10 +23,10 @@ class SignUp extends React.Component {
         this.state = {
             myName: '',
             myGender: 'Male',
-            myHeight: null,
-            myWeight: null,
-            myAge: null,
-            myPlan: null
+            myHeight: 0,
+            myWeight: 0,
+            myAge: 0,
+            myPlan: 0
         };
     
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,11 +44,15 @@ class SignUp extends React.Component {
     }
 
     handleSubmit(event) {
-        //alert(this.state.myAge);
+        read();
         event.preventDefault();
     }
 
+
+
     render() {
+        
+
         return(
             <div className = 'dim'>
             <div className='popup'>  
@@ -59,14 +77,14 @@ class SignUp extends React.Component {
                             </section>
                             <br />
                         <section className = "height">
-                            <label for='myHeight'>
+                            <label>
                                 Height (inches): 
                                 <input type="number" name = "myHeight" value = {this.state.myHeight} onChange = {this.handleInputChange} required />
                             </label>
                         </section>
                         <br />
                         <section className = "weight">
-                            <label for='myWeight'>
+                            <label>
                                 Weight (pounds): 
                                 <input type="number" name="myWeight" value = {this.state.myWeight} onChange = {this.handleInputChange} required />
                             </label>
