@@ -5,7 +5,6 @@ import Nav from './Nav.js';
 import History from './History.js';
 import Clock from './Clock.js';
 import Timer from './Timer.js';
-import { Chart } from "react-google-charts";
 
 
 
