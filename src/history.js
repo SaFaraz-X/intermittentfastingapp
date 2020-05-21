@@ -66,7 +66,7 @@ class History extends Component {
 
     render(){
         return (
-            <div classname='Chart'>
+            <div className='Chart'>
             <h1>History Chart</h1>
 
             <Chart

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import Home from './Home.js';
 import Nav from './Nav.js';
-import History from './History.js';
+import History from './history.js';
 import About from './About.js'
 import Clock from './Clock.js';
 import Timer from './Timer.js';

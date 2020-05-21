@@ -1,21 +1,8 @@
 import React from 'react';
 import './SignUp.css';
-import './userWriter.js'
+//import User from './User.js';
+
 //import Person from './Person'
-
-function read() {
-    const fs = require('fs')
-
-    alert()
-
-    fs.readFile('./Users.JSON', 'utf8', (err, jsonString) => {
-        if (err) {
-            console.log("File read failed:", err)
-            return
-        }
-        alert('File data:', jsonString) 
-    })
-}
 
 class SignUp extends React.Component {
     constructor(props) {
@@ -44,21 +31,18 @@ class SignUp extends React.Component {
     }
 
     handleSubmit(event) {
-        read();
         event.preventDefault();
     }
 
 
 
     render() {
-        
 
         return(
             <div className = 'dim'>
             <div className='popup'>  
                 <form onSubmit={this.handleSubmit}>
                         <h1>Sign Up!</h1>
-        
                         <section className = "name">
                             <label>
                                 Name: 
@@ -99,7 +83,7 @@ class SignUp extends React.Component {
             
                         <br /><br />
                 
-                        <section class = "next">
+                        <section className = "next">
                             <input type="submit" value="Submit" />
                         </section>
                     </form>
