@@ -1,11 +1,8 @@
 .popup {  
     position: fixed;  
     width: 500px;  
-<<<<<<< HEAD
     height: 350px;  
-=======
     height: 450px;  
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
     top: 0;  
     left: 0;  
     right: 0;  

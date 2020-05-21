@@ -12,10 +12,7 @@ class SignUp extends React.Component {
             myHeight: null,
             myWeight: null,
             myAge: null,
-<<<<<<< HEAD
             myPlan: null
-=======
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
         };
     
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,11 +46,8 @@ class SignUp extends React.Component {
                                 Name:
                                 <input name = "myName" type="text" value = {this.state.myName} onChange = {this.handleInputChange} required />
                             </label>
-<<<<<<< HEAD
                         </section>
-=======
-                        </section><br />
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
+                        <br />
                         <section className = "gender">
                             <label>
                                 Gender:
@@ -62,50 +56,38 @@ class SignUp extends React.Component {
                                 <option value = "Female">Female</option>
                                 </select>
                                 </label>
-<<<<<<< HEAD
                             </section>
-=======
-                            </section><br />
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
+                            <br />
                         <section className = "height">
                             <label for='myHeight'>
                                 Height (inches):
                                 <input type="number" name = "myHeight" value = {this.state.myHeight} onChange = {this.handleInputChange} required />
                             </label>
-<<<<<<< HEAD
                         </section>
-=======
-                        </section><br />
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
+                        <br />
                         <section className = "weight">
                             <label for='myWeight'>
                                 Weight (pounds):
                                 <input type="number" name="myWeight" value = {this.state.myWeight} onChange = {this.handleInputChange} required />
                             </label>
-<<<<<<< HEAD
                         </section>
-=======
-                        </section><br />
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
+                        <br />
                         <section className = "age">
                             <label>
                                 Age (years):
                                 <input type="number" name="myAge" value = {this.state.myAge} onChange = {this.handleInputChange} required />
                             </label>
-<<<<<<< HEAD
                         </section>
                 
                         <br />
                 
                         <section class = "next">
                             <input type="submit" value="Next" />
-=======
                         </section><br />
                         <br /><br />
                 
                         <section class = "next">
                             <input type="submit" value="Submit" />
->>>>>>> 40d599e33985d0fdfa0b210c8a09348a48dd2755
                         </section>
                     </form>
                     <button onClick={this.props.closePopup}>Cancel</button>  
