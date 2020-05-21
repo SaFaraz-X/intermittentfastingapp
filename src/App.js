@@ -4,6 +4,12 @@ import Home from './Home.js';
 import Nav from './Nav.js';
 import History from './History.js';
 import Clock from './Clock.js';
+import Timer from './Timer.js';
+import { Chart } from "react-google-charts";
+
+
+
+
 
 
 class App extends Component {
@@ -14,6 +20,10 @@ class App extends Component {
         <Home />
         <Clock />
         <History />
+        <Timer
+        githubURL="https://github.com/completejavascript/pomodoro-clock" 
+        defaultBreakLength='8' 
+        defaultSessionLength='16' />
       </div>
     );
   }
