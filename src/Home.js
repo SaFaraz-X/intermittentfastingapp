@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import logo from './logo.svg'
+import PopUp from './PopUp'
 
 
 const home = () => {
@@ -8,7 +9,7 @@ const home = () => {
       <div>
       <div className="Home">
         <h1 className='Welcome' >This is what happens when tech meets wellness.</h1>
-        <button className='Signup'>Sign up</button>
+        <PopUp />
       </div>
       <div>
         <img src={logo} className='logo'/>
