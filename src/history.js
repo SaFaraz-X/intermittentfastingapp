@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import {Bar, Charts, defaults} from 'react-chartjs-2';
-<<<<<<< HEAD
 import { Chart } from "react-google-charts";
-=======
 import './ClockAndTimer.css';
->>>>>>> cde8ff0a0788cf5925f735a90ceaffd91fadc138
 
 
 class History extends Component {
