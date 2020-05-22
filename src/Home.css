@@ -81,7 +81,7 @@ h1 {
   position: relative; top: 130px;
 }
 
-.Signup:hover {
+.Signup:hover, .Login:hover {
   transform: scale(1.05);
 }
 
