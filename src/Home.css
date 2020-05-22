@@ -1,5 +1,5 @@
 body {
-  background-color: #0e9AA7;
+  background-color: #1B1F3B;
   color: #ffffff;
   padding: 20px;
   margin: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-  color: #F5EE9E;
+  color: #93A8AC;
   font-size: 3em;;
 }
 
@@ -40,11 +40,11 @@ h1 {
 
 .Welcome {
   position: relative; top: 50px;
-  color: #2D728F
+  color: #3E4C5E
 }
 
 .Signup {
-  background-color:#FE4A49; 
+  background-color:#A9E5BB; 
   border: none;
   color: white;
   padding: 20px;
@@ -64,8 +64,8 @@ h1 {
 
 .Login {
   background-color: #E9EFF0; 
-  border: 3px solid #FE4A49;
-  color: #FE4A49;
+  border: 3px solid #A9E5BB;
+  color: #A9E5BB;
   padding: 20px;
   text-align: center;
   text-decoration: none;
