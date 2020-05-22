@@ -19,6 +19,7 @@ export default class Timer extends Component {
       timeLabel: 'Intermittent Fast',
       timeLeftInSecond: Number.parseInt(this.props.defaultSessionLength, 10) * 60 *60,
       isStart: false,
+      myFastingSchedule: '16:8',
       timerInterval: null
     }
 
@@ -30,10 +31,11 @@ export default class Timer extends Component {
     this.onStartStop = this.onStartStop.bind(this);
     this.decreaseTimer = this.decreaseTimer.bind(this);
     this.phaseControl = this.phaseControl.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   onIncreaseBreak() {
-    if (this.state.breakLength < 24 && !this.state.isStart) {
+    if (this.state.breakLength < 24 && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
@@ -43,7 +45,7 @@ export default class Timer extends Component {
   }
 
   onDecreaseBreak() {
-    if (this.state.breakLength > 0  && !this.state.isStart) {
+    if (this.state.breakLength > 0  && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
@@ -53,7 +55,7 @@ export default class Timer extends Component {
   }
 
   onIncreaseSession() {
-    if (this.state.sessionLength < 24 && !this.state.isStart) {
+    if (this.state.sessionLength < 24 && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
@@ -63,7 +65,7 @@ export default class Timer extends Component {
   }
 
   onDecreaseSession() {
-    if (this.state.sessionLength > 0  && !this.state.isStart) {
+    if (this.state.sessionLength > 0  && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
@@ -114,6 +116,11 @@ export default class Timer extends Component {
     });
   }
 
+  handleChange(event) {
+    this.setState({myFastingSchedule: event.target.value});
+  } 
+
+
   phaseControl() {
     if (this.state.timeLeftInSecond === 0) {
       this.audioBeep.current.play();
@@ -137,7 +144,16 @@ export default class Timer extends Component {
         <div className="clock-header">
           <h1 className="clock-header-name">Timer</h1>
         </div>
-
+        <form>
+          <label className='choose'>
+            Choose Your Fasting Schedule: 
+            <select name = "myFastingSchedule" value = {this.state.value} onChange = {this.handleChange}>
+              <option value = "16:8">16:8</option>
+              <option value = "18:6">18:6</option>
+              <option value = "Custom">Custom</option>
+            </select>
+          </label>
+        </form>
         <Settings
           breakLength={this.state.breakLength}
           sessionLength={this.state.sessionLength}
