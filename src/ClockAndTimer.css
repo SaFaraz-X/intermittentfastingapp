@@ -2,30 +2,37 @@
     position: relative; 
     top: -800px; 
     left: 100px;
+    display: inline-block; 
 }
 .clock {
     position: relative; 
     top: -600px; 
     left: -200px;
+    display: inline-block; 
 }
 .header {
     position: relative; 
     top: -140px; 
     left: 800px;
+    display: inline-block; 
 }
 .modal {
     position: relative; 
     left: 1000px; 
     top: -150px;
+    display: inline-block; 
 }
 .countdown {
     position: relative; 
     top: -150px; 
     left: 850px;
+    display: inline-block; 
 }.clock2 {
     position: relative; 
     top: -2100px;
+    display: inline-block; 
 }.choose {
     position: relative; 
     left: 550px;
+    display: inline-block; 
 }
