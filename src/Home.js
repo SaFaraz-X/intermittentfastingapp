@@ -51,7 +51,7 @@ class Home extends React.Component {
         <div>
         <div className="Home">
           <h1 className='Welcome' >{this.state.welcomeText}</h1>
-          <button className = 'Signup' onClick={this.signIn}>Sign In</button>
+          <button className = 'Login' onClick={this.signIn}>Log In</button>
           <PopUp />
         </div>
         <div>

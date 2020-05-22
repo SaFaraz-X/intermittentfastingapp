@@ -25,8 +25,6 @@ h1 {
   font-size: 3em;;
 }
 
-
-
 .logo {
   width: 100px;
   height: 100px;
@@ -49,6 +47,25 @@ h1 {
   background-color:#FE4A49; 
   border: none;
   color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 300px;
+  height: 90px;
+  font-size: 1.6em;
+  font-weight: bold;
+  position: relative; top: 130px;
+}
+
+.Login {
+  background-color: #E9EFF0; 
+  border: 3px solid #FE4A49;
+  color: #FE4A49;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -93,7 +110,7 @@ h1 {
 }
 
 .BigLogo {
-  position: relative;  left: 845px; top: -760px;
+  position: relative;  left: 845px; top: -810px;
 }
 
 .smartfast {
@@ -112,11 +129,11 @@ h1 {
   width: 120px;
   height: auto;
   padding: 15px;
-  position: relative; top:-1570px; left:820px;
+  position: relative; top:-1620px; left:820px;
 }
 
 .team {
-  position: relative; left: 940px; top:-1800px;
+  position: relative; left: 940px; top:-1850px;
   font-size: 1em;
 }
 
@@ -128,7 +145,7 @@ h1 {
   font-size: 1.5em;
   justify-content: space-between;
   width: 520px;
-  position: relative; left: 800px; top: -1700px;
+  position: relative; left: 800px; top: -1750px;
 }
 
 .Sa {
