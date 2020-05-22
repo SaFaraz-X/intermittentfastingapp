@@ -33,9 +33,11 @@ export default class Timer extends Component {
   }
 
   onIncreaseBreak() {
-    if (this.state.breakLength < 24 && (this.state.sessionLength + this.state.breakLength) < 24 && !this.state.isStart) {
+    if (this.state.breakLength < 24 && !this.state.isStart) {
       this.setState({
-        breakLength: this.state.breakLength + 1
+        breakLength: this.state.breakLength + 1,
+        sessionLength: this.state.sessionLength - 1,
+        timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60
       });
     }
   }
@@ -43,14 +45,17 @@ export default class Timer extends Component {
   onDecreaseBreak() {
     if (this.state.breakLength > 0  && !this.state.isStart) {
       this.setState({
-        breakLength: this.state.breakLength - 1
+        breakLength: this.state.breakLength - 1,
+        sessionLength: this.state.sessionLength + 1,
+        timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60
       });
     }
   }
 
   onIncreaseSession() {
-    if (this.state.sessionLength < 24 && (this.state.sessionLength + this.state.breakLength) < 24 && !this.state.isStart) {
+    if (this.state.sessionLength < 24 && !this.state.isStart) {
       this.setState({
+        breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
         timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60
       });
@@ -60,6 +65,7 @@ export default class Timer extends Component {
   onDecreaseSession() {
     if (this.state.sessionLength > 0  && !this.state.isStart) {
       this.setState({
+        breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
         timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60
       });
