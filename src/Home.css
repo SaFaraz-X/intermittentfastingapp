@@ -4,6 +4,7 @@ body {
   padding: 20px;
   margin: 0;
   overflow-x: hidden;
+  margin-bottom: 0px;
 }
 
 .Home {
@@ -111,11 +112,11 @@ h1 {
   width: 120px;
   height: auto;
   padding: 15px;
-  position: relative; top:-1700px; left:760px;
+  position: relative; top:-1700px; left:820px;
 }
 
 .team {
-  position: relative; left: 935px; top:-1960px;
+  position: relative; left: 940px; top:-1930px;
   font-size: 1em;
 }
 
@@ -123,7 +124,7 @@ h1 {
   list-style: none;
   display: flex;
   flex: wrap;
-  padding: 10px;
+  padding: 8px;
   font-size: 1.5em;
   justify-content: space-between;
   width: 520px;
@@ -131,17 +132,17 @@ h1 {
 }
 
 .Sa {
-  position: relative; left: 10px;
+  position: relative; left: 60px;
 }
 
 .MattT {
-  position: relative; left: 35px;
+  position: relative; left: 53px;
 }
 
 .Amatullah {
   position: relative; left: 15px;
 }
 
-.Matt {
-  position: relative; left: 0px;
+.MattM {
+  position: relative; left: -30px;
 }

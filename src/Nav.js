@@ -5,8 +5,8 @@ const Nav = props => {     // functional component- has no state, is controlling
     return (
         <div className="navbar">
         <a href="#About">About</a>
-        <a href="#Timer">Timer</a>
-        <a href="#History">History</a>
+        <a href="#clock2">Timer</a>
+        <a href="#Chart">History</a>
         </div>
 
     );

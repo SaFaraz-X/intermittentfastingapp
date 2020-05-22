@@ -127,7 +127,7 @@ export default class Timer extends Component {
   }
   render() {
     return (
-      <div className="clock">
+      <div className="clock2" id='clock2'>
         <div className="clock-header">
           <h1 className="clock-header-name">Timer</h1>
         </div>
