@@ -137,7 +137,7 @@ class Clock extends Component {
         }
         else {
           this.setState({
-            infoMessage: 'Click the Settings button to start a new countdown.',
+            // infoMessage: 'Click the Settings button to start a new countdown.',
             infoStyle: {display: 'block'}
           });
         }
