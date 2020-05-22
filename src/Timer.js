@@ -3,6 +3,7 @@ import Settings from './Settings';
 import Times from './Times';
 import Controller from './Controller';
 import './Timer.css';
+import History from './history'
 
 
 
@@ -20,7 +21,11 @@ export default class Timer extends Component {
       timeLeftInSecond: Number.parseInt(this.props.defaultSessionLength, 10) * 60 *60,
       isStart: false,
       myFastingSchedule: '16:8',
-      timerInterval: null
+      timerInterval: null,
+      startTime: 57600,
+      endTime: 57600,
+      timeFasted: 0,
+      timeEaten: 0
     }
 
     this.onIncreaseBreak = this.onIncreaseBreak.bind(this);
@@ -39,7 +44,9 @@ export default class Timer extends Component {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
-        timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60
+        timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60,
+        startTime: this.state.timeLeftInSecond,
+        endTime: this.state.timeLeftInSecond
       });
     }
   }
@@ -49,7 +56,9 @@ export default class Timer extends Component {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
-        timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60
+        timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60,
+        startTime: this.state.timeLeftInSecond,
+        endTime: this.state.timeLeftInSecond
       });
     }
   }
@@ -59,7 +68,9 @@ export default class Timer extends Component {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
-        timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60
+        timeLeftInSecond: (this.state.sessionLength + 1) * 60 *60,
+        startTime: this.state.timeLeftInSecond,
+        endTime: this.state.timeLeftInSecond
       });
     }
   }
@@ -69,7 +80,9 @@ export default class Timer extends Component {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
-        timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60
+        timeLeftInSecond: (this.state.sessionLength - 1) * 60 *60,
+        startTime: this.state.timeLeftInSecond,
+        endTime: this.state.timeLeftInSecond
       });
     }
   }
@@ -81,12 +94,15 @@ export default class Timer extends Component {
       timeLabel: 'Intermittent Fast',
       timeLeftInSecond: Number.parseInt(this.props.defaultSessionLength, 10) * 60 *60,
       isStart: false,
-      timerInterval: null
+      timerInterval: null,
+      startTime: this.state.timeLeftInSecond,
+      endTime: this.state.timeLeftInSecond
     });
 
     this.audioBeep.current.pause();
     this.audioBeep.current.currentTime = 0;
     this.state.timerInterval && clearInterval(this.state.timerInterval);
+    alert(this.state.timeFasted)
   }
 
   onStartStop() {
@@ -96,7 +112,7 @@ export default class Timer extends Component {
         timerInterval: setInterval(() => {
           this.decreaseTimer();
           this.phaseControl();
-        }, 1000)
+        }, 1000),
       })
     } else {
       this.audioBeep.current.pause();
@@ -105,7 +121,10 @@ export default class Timer extends Component {
 
       this.setState({
         isStart: !this.state.isStart,
-        timerInterval: null
+        timerInterval: null,
+        endTime: this.state.timeLeftInSecond,
+        timeFasted: this.state.startTime - this.state.timeLeftInSecond,
+        timeEaten: 24 - this.state.startTime - this.state.timeLeftInSecond
       });
     }
   }
@@ -136,7 +155,10 @@ export default class Timer extends Component {
       breakLength: eatLength,
       sessionLength: fastLength,
       timeLeftInSecond: fastLength*3600,
+      startTime: fastLength*3600
     });
+
+
   } 
 
 
@@ -196,7 +218,9 @@ export default class Timer extends Component {
 
         <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" ref={this.audioBeep}></audio>
         {/* <footer>Designed based on a pen by <a href="https://codepen.io/eddyerburgh/full/yOjdqo/">Edd Yerburgh</a> and coded by <a href="http://about.phamvanlam.com">Lam Pham</a>.</footer> */}
-
+        <div className = "Chart">
+          <History fastTime = {this.state.timeFasted} eatTime ={this.state.timeEaten} />
+        </div>
         
       </div>
     );

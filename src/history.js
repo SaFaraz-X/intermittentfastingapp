@@ -13,7 +13,17 @@ class History extends Component {
             chartData:{
                 date: "",
                 time: ""
-            }
+            },
+            data: [
+                ['Day', 'Fasting Time', 'NonFasting Time'],
+                ['May 18, 2020', 10, 14],
+                ['May 19, 2020', 8, 16],
+                ['May 20, 2020', 14, 10],
+                ['May 21, 2020', 3, 21],
+                ['May 22, 2020', this.props.fastTime, this.props.eatTime],
+                ['May 23, 2020', 10, 14],
+                ['May 24, 2020', 7, 17],
+            ]
         }
     }
 
@@ -74,16 +84,7 @@ class History extends Component {
                 height={'300px'}
                 chartType="BarChart"
                 loader={<div>Loading Chart</div>}
-                data={[
-                    ['Day', 'Fasting Time', 'NonFasting Time'],
-                    ['May 18, 2020', 10, 14],
-                    ['May 19, 2020', 8, 16],
-                    ['May 20, 2020', 14, 10],
-                    ['May 21, 2020', 3, 21],
-                    ['May 22, 2020', 9, 15],
-                    ['May 23, 2020', 10, 14],
-                    ['May 24, 2020', 7, 17],
-                ]}
+                data={this.state.data}
                 options={{
                     title: 'Tracking Fast (hours per day)',
                     chartArea: { width: '50%' },
