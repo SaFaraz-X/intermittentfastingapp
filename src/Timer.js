@@ -19,9 +19,8 @@ export default class Timer extends Component {
       timeLabel: 'Intermittent Fast',
       timeLeftInSecond: Number.parseInt(this.props.defaultSessionLength, 10) * 60 *60,
       isStart: false,
-      timerInterval: null,
-      canEdit: false,
-      myFastingSchedule: '16:8'
+      myFastingSchedule: '16:8',
+      timerInterval: null
     }
 
     this.onIncreaseBreak = this.onIncreaseBreak.bind(this);
@@ -32,11 +31,11 @@ export default class Timer extends Component {
     this.onStartStop = this.onStartStop.bind(this);
     this.decreaseTimer = this.decreaseTimer.bind(this);
     this.phaseControl = this.phaseControl.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   onIncreaseBreak() {
-    if (this.state.breakLength < 24 && !this.state.isStart && this.canEdit) {
+    if (this.state.breakLength < 24 && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
@@ -46,7 +45,7 @@ export default class Timer extends Component {
   }
 
   onDecreaseBreak() {
-    if (this.state.breakLength > 0  && !this.state.isStart && this.canEdit) {
+    if (this.state.breakLength > 0  && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
@@ -56,7 +55,7 @@ export default class Timer extends Component {
   }
 
   onIncreaseSession() {
-    if (this.state.sessionLength < 24 && !this.state.isStart && this.canEdit) {
+    if (this.state.sessionLength < 24 && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength - 1,
         sessionLength: this.state.sessionLength + 1,
@@ -66,7 +65,7 @@ export default class Timer extends Component {
   }
 
   onDecreaseSession() {
-    if (this.state.sessionLength > 0  && !this.state.isStart && this.canEdit) {
+    if (this.state.sessionLength > 0  && !this.state.isStart && this.state.myFastingSchedule === 'Custom') {
       this.setState({
         breakLength: this.state.breakLength + 1,
         sessionLength: this.state.sessionLength - 1,
@@ -117,24 +116,10 @@ export default class Timer extends Component {
     });
   }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-    
-    // if(value === 'Custom'){
-    //   let ifAllowed = true;
-    // } else {
-    //   let ifAllowed = false;
-    // }
+  handleChange(event) {
+    this.setState({myFastingSchedule: event.target.value});
+  } 
 
-    // alert(ifAllowed)
-
-    this.setState({
-      [name]: value,
-      //['canEdit']: ifAllowed
-    });
-}
 
   phaseControl() {
     if (this.state.timeLeftInSecond === 0) {
@@ -162,7 +147,7 @@ export default class Timer extends Component {
         <form>
           <label className='choose'>
             Choose Your Fasting Schedule: 
-            <select name = "myFastingSchedule" value = {this.state.value} onChange = {this.handleInputChange} required>
+            <select name = "myFastingSchedule" value = {this.state.value} onChange = {this.handleChange}>
               <option value = "16:8">16:8</option>
               <option value = "18:6">18:6</option>
               <option value = "Custom">Custom</option>
