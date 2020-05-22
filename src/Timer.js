@@ -134,7 +134,8 @@ export default class Timer extends Component {
     this.setState({
       myFastingSchedule: event.target.value,
       breakLength: eatLength,
-      sessionLength: fastLength
+      sessionLength: fastLength,
+      timeLeftInSecond: fastLength*3600
     });
   } 
 
