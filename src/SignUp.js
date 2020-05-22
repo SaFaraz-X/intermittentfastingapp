@@ -32,12 +32,15 @@ class SignUp extends React.Component {
     }
  
     handleSubmit(event) {
-        let x = UserInfo.map((userInfo, index) =>{
-            console.log(userInfo.age)
-            return (
-                userInfo.name
-            )
-        })
+        // let x = UserInfo.map((userInfo, index) =>{
+        //     console.log(userInfo.age)
+        //     return (
+        //         userInfo.name
+        //     )
+        // })
+
+        let x = UserInfo.map(x=> x.name = "Matt")
+
         alert(x)
 
         event.preventDefault();
@@ -94,6 +97,7 @@ class SignUp extends React.Component {
                             <input type="submit" value="Submit" />
                         </section>
                     </form>
+
                     <button onClick={this.props.closePopup}>Cancel</button>  
             </div>
             </div>
