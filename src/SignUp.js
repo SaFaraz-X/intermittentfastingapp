@@ -1,5 +1,6 @@
 import React from 'react';
 import './SignUp.css';
+import UserInfo from './Users.json';
 //import User from './User.js';
 
 //import Person from './Person'
@@ -29,12 +30,18 @@ class SignUp extends React.Component {
           [name]: value
         });
     }
-
+ 
     handleSubmit(event) {
+        let x = UserInfo.map((userInfo, index) =>{
+            console.log(userInfo.age)
+            return (
+                userInfo.name
+            )
+        })
+        alert(x)
+
         event.preventDefault();
     }
-
-
 
     render() {
 
