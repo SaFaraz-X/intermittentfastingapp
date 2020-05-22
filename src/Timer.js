@@ -117,7 +117,25 @@ export default class Timer extends Component {
   }
 
   handleChange(event) {
-    this.setState({myFastingSchedule: event.target.value});
+    let fastLength;
+    let eatLength;
+    
+    if(event.target.value === '16:8'){
+      fastLength = 16;
+      eatLength = 8;
+    } else if(event.target.value === '18:6') {
+      fastLength = 18;
+      eatLength = 6;
+    } else {
+      fastLength = this.state.sessionLength;
+      eatLength = this.state.breakLength;
+    }
+  
+    this.setState({
+      myFastingSchedule: event.target.value,
+      breakLength: eatLength,
+      sessionLength: fastLength
+    });
   } 
 
 
