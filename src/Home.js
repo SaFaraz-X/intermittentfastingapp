@@ -2,15 +2,31 @@ import React from 'react';
 import './Home.css';
 import logo from './logo.svg'
 import PopUp from './PopUp'
-
+import UserInfo from './Users.json';
 
 const home = () => {
-    let userNum = 0;
+    let userName;
     let welcomeString;
-    if(userNum === null){
+    let myName = null;
+
+    let x = UserInfo.map((userInfo, index) =>{
+      return (
+          userInfo.name
+      )
+    })
+
+    userName = window.prompt("Please enter your name: ");
+
+     for(var i = 0; i < x.length; i++){
+       if(userName === x[i]){
+         myName = x[i];
+      }
+    }
+
+    if(myName === null){
       welcomeString = 'This is what happens when tech meets wellness.'
     } else {
-      welcomeString = 'Welcome, Matt.'
+      welcomeString = 'Welcome, ' + myName + '.'
     }
 
     return(
