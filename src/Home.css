@@ -20,7 +20,7 @@ body {
   border-radius: 40px;
 }
 
-h1 {
+ h1 {
   color: #93A8AC;
   font-size: 3em;;
 }
@@ -28,15 +28,31 @@ h1 {
 .logo {
   width: 100px;
   height: 100px;
-  position:relative; left:20px; top: -620px;
+  position:relative; left:20px; top: -600px;
 }
 
 .logoName {
-  position:relative; top: -660px; left: 19px;
+  position:relative; top: -640px; left: 19px;
   color: #ffffff;
   font-size: 1.3em;
   font-weight: bold;
+} 
+
+/* .logo {
+  width: 100px;
+  height: 100px;
+  position:relative; left:20px; top: -600px;
 }
+.logoName {
+  position:relative; top: -640px; left: 19px;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+h1 {
+  color: #E9EFF0
+}
+; */
 
 .Welcome {
   position: relative; top: 50px;

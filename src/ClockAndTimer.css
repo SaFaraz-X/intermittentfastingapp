@@ -1,28 +1,31 @@
 .Chart {
-    position: relative; top: -800px; left: 100px;
-  }
-
+    position: relative; 
+    top: -800px; 
+    left: 100px;
+}
 .clock {
-    position: relative; top: -700px; left: -200px;
+    position: relative; 
+    top: -600px; 
+    left: -200px;
 }
-
 .header {
-    position: relative; top: -140px; left: 800px;
+    position: relative; 
+    top: -140px; 
+    left: 800px;
 }
-
 .modal {
-    position: relative; left: 1000px; top: -150px;
+    position: relative; 
+    left: 1000px; 
+    top: -150px;
 }
-
 .countdown {
-    position: relative; top: -150px; left: 950px;
+    position: relative; 
+    top: -150px; 
+    left: 850px;
+}.clock2 {
+    position: relative; 
+    top: -2100px;
+}.choose {
+    position: relative; 
+    left: 550px;
 }
-
-.clock2 {
-    position: relative; top: -2100px;
-}
-
-.choose {
-    position: relative; left: 550px;
-}
-
