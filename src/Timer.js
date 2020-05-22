@@ -138,7 +138,7 @@ export default class Timer extends Component {
           <h1 className="clock-header-name">Timer</h1>
         </div>
         <form>
-          <label>
+          <label className='choose'>
             Choose Your Fasting Schedule: 
             <select name = "myFastingSchedule" value = {this.state.value} onChange = {this.handleInputChange} required>
               <option value = "16:8">16:8</option>

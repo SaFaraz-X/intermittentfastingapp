@@ -19,6 +19,10 @@
 }
 
 .clock2 {
-    position: relative; top: -2200px;
+    position: relative; top: -2100px;
+}
+
+.choose {
+    position: relative; left: 550px;
 }
 
