@@ -7,7 +7,7 @@ import PopUp from './PopUp'
 const home = () => {
     let userNum = 0;
     let welcomeString;
-    if(userNum ===null){
+    if(userNum === null){
       welcomeString = 'This is what happens when tech meets wellness.'
     } else {
       welcomeString = 'Welcome, Matt.'

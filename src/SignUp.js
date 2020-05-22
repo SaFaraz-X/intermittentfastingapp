@@ -39,9 +39,9 @@ class SignUp extends React.Component {
         //     )
         // })
 
-        let x = UserInfo.map(x=> x.name = "Matt")
+        // let x = UserInfo.map(x=> x.name = "Matt")
 
-        alert(x)
+        // alert(x)
 
         event.preventDefault();
     }
