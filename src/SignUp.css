@@ -1,5 +1,5 @@
 .popup {
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 400px;;
     top: 0;
@@ -11,6 +11,7 @@
     border: 100px;
     border-color: #2F4858;
     color: white;
+    z-index: 10;
 }
 
 .dim {
