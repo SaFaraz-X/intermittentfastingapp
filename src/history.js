@@ -23,8 +23,9 @@ class History extends Component {
                 ['May 22, 2020', this.props.fastTime, this.props.eatTime],
                 ['May 23, 2020', 10, 14],
                 ['May 24, 2020', 7, 17],
-            ]
+              ]
         }
+        this.updateChart = this.updateChart.bind(this);
     }
 
     // Source: https://www.youtube.com/watch?v=p4XTMvagQ2Q
@@ -74,6 +75,12 @@ class History extends Component {
 
     // }
 
+    updateChart(e) {
+        this.setState({
+            data: this.state.data,
+        })
+    }
+
     render(){
         return (
             <div className='Chart'>
@@ -99,6 +106,7 @@ class History extends Component {
                     },
                 }}
             />
+            <button onClick = {this.updateChart}>Update Chart</button>
 
             {/* <Bar 
             <div className='Chart'>

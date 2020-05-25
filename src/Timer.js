@@ -25,7 +25,7 @@ export default class Timer extends Component {
       startTime: 57600,
       endTime: 57600,
       timeFasted: 0,
-      timeEaten: 0
+      timeEaten: 0, 
     }
 
     this.onIncreaseBreak = this.onIncreaseBreak.bind(this);
@@ -218,9 +218,9 @@ export default class Timer extends Component {
 
         <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" ref={this.audioBeep}></audio>
         {/* <footer>Designed based on a pen by <a href="https://codepen.io/eddyerburgh/full/yOjdqo/">Edd Yerburgh</a> and coded by <a href="http://about.phamvanlam.com">Lam Pham</a>.</footer> */}
-        <div className = "Chart">
+        {/* <div className = "Chart">
           <History fastTime = {this.state.timeFasted} eatTime ={this.state.timeEaten} />
-        </div>
+        </div> */}
         
       </div>
     );
